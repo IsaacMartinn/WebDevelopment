@@ -1,0 +1,64 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.top-container{
+   background-color:rgb(228, 249, 245); 
+   padding-top: 0px;
+   display: block;
+   text-align: center;
+   padding-top: 100px;
+}
+#pro{
+    text-decoration: underline;
+}
+.cloud{
+    position:relative;
+    left: 200px;
+}
+
+h1{
+    font-family: Sacramento, cursive;
+    font-size: 90px;
+    font-weight: 700;
+}
+h2{
+    font-size: 40px;
+    font-weight: 400;
+}
+.text{
+    color: rgb(102, 191, 191);
+}
+
+.profile{
+    padding-top: 100px;
+    text-align: center;
+}
+
+.headshot{
+    border-radius: 50%;
+}
+
+.footer-bottom{
+    background-color:rgb(102, 191, 191);
+    height: 150px;
+    text-align: center;
+    
+}
+
+.flex-footer{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.name{
+    color: white;
+}
+
+.contact-container{
+    text-align: center;
+    padding: 50px;
+}
