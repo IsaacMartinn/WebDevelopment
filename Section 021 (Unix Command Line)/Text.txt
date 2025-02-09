@@ -1,0 +1,27 @@
+To learn more about the CLI  read through this: 
+
+https://www.learnenough.com/command-line-tutorial
+
+ls //list files and director 
+cd //change directory
+cd Doocuments/Learn/Languages //to get through multiple paths at once
+
+cd..   //brings you back a level
+
+mkdir Isaac  // making a directory named Isaac
+
+touch Text.txt  //creating a file named Text
+
+open Text.txt  //opening the file 
+
+open -a "Visual Studio Code" Text.txt  //opens file in vscode
+
+rm Text.txt  //deletes file
+
+pwd  // gives current direcotry path 
+
+rm * //removes all files in directory 
+
+rm -r Isaac //removes directory 
+
+rmdir Isaac //removes directory 
