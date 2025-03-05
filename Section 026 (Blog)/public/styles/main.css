@@ -1,0 +1,14 @@
+*{
+    background-color: #222225;
+}
+
+.container{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+/* #name{
+    padding-right:80vw;
+} */
