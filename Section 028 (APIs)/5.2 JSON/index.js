@@ -19,27 +19,55 @@ app.get("/", (req, res) => {
 });
 
 app.post("/recipe", (req, res) => {
-  var x = req.body;
-  var firstLetter = x.choice.charAt(0).toUpperCase();
+  let x = req.body;
+  let firstLetter = x.choice.charAt(0).toUpperCase();
   let foodChoice = firstLetter + x.choice.slice(1,x.choice.length);
+
+
   // console.log(foodChoice);
 
-  // let i = 0;
-  // while(i<3){
-  //   if (data[i]["ingredients"]["protein"]['name'] === foodChoice){
+  let i = 0;
+  while(i<3){
+    if (data[i]["ingredients"]["protein"]['name'] === foodChoice){
+      console.log("Got it!");
+      break;
+    }else{
+      i++;
+      console.log("not here")
+    }
+  }
 
-  //   }
-  //   console.log(i);
-  //   i++;
-  // }
+  let j = 0 
+  const toppings = []
+  let lengthOfToppingsArray = data[i]["ingredients"]["toppings"].length
+
+  while(j<lengthOfToppingsArray){
+    let toppingQuantity = data[i]["ingredients"]["toppings"][j]['quantity']
+    let toppingNames = data[i]["ingredients"]["toppings"][j]['name']
+    toppings.push([toppingQuantity,toppingNames])
+    j++
+  }
+
+  console.log(toppings)
 
   
-  console.log(data[0]["ingredients"]["protein"]['name'])
+
+  var foodIngredients = {
+    proteinName : data[i]["ingredients"]["protein"]['name'],
+    proteinPrep : data[i]["ingredients"]["protein"]['preparation'],
+    salsaName : data[i]["ingredients"]["salsa"]["name"],
+    toppingsList: toppings
+  }
+  // var proteinName = data[i]["ingredients"]["protein"]['name'];
+  // let proteinPrep = data[i]["ingredients"]["protein"]['preparation'];
+  // let salsaName = data[i]["ingredients"]["salsa"]["name"];
+  // let toppingQuantity = data[i]["ingredients"]["toppings"][0]['quantity'];
+  // let toppingNames = data[i]["ingredients"]["toppings"][0]['name'];
+  // let lengthOfToppingsArray = data[i]["ingredients"]["toppings"].length
 
 
 
-
-  res.render("index.ejs");
+  res.render("index.ejs",{ingredients: foodIngredients});
 
 
   //Step 3: Write your code here to make this behave like the solution website.
