@@ -1,0 +1,19 @@
+body {
+    background-image: url('/images/book_background.jpg');
+    background-size: cover; /* covers entire screen */
+    background-position: center; /* centers the image */
+    background-repeat: no-repeat; /* prevents repeating */
+    background-attachment: fixed; /* fixes image during scroll */
+    color: #fff; /* Adjust text color for contrast */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.5); /* transparent overlay for readability */
+    padding: 20px;
+    min-height: 100vh;
+}
+
+
