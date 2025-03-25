@@ -7,15 +7,36 @@
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-    <div class="contents">
-        <h1>Isaac Martin</h1>
-        <h2>Books I've Read</h2>
-        <p>Tiny summary but detailed notes for each. 
-        Use the ISBN number to find it from your local library or anywhere else. This page will constantly update as I read more, 
-        so bookmark it if you want to check back in a few months.
-        </p>
-        <p>Sorted with my top recommendations up top. Sort by title, newest, or best.</p>
-        <hr/>
+    <div class="container-flex">
+        <div class="header">
+            <h1>Isaac Martin</h1>
+            <h2>Books I've Read</h2>
+            <p>Tiny summary but detailed notes for each. 
+            Use the ISBN number to find it from your local library or anywhere else. This page will constantly update as I read more, 
+            so bookmark it if you want to check back in a few months.
+            </p>
+            <p>Sorted with my top recommendations up top. Sort by title, newest, or best.</p>
+            <hr/>
+        </div>
+        <% for (let content of contents){%>
+        <div class="container-grid">
+            <div class="item1">
+                <img src="<%= content.cover %>" alt="Book Cover" class="book-cover">
+            </div>
+            <div class="item2">
+                <h3 class="book-title"><%= content.title %> - by <%= content.author %></h3>
+                <p class="date-read">DATE READ: <%= content.date %>. HOW STRONGLY I RECOMMEND IT: <%= content.rating %>/10</p>
+                <p class="book-description">
+                    <%= content.review %>
+                </p>
+                <p>
+                    <a href="#" class="notes-link">Read my notes</a>, or go to the
+                    <a href="#" class="amazon-link">Amazon page</a> for details and reviews.
+                </p>
+            </div>
+        </div>
+        <% } %>
+
     </div>
 
 

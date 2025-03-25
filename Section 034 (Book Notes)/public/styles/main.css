@@ -1,19 +1,71 @@
 body {
     background-image: url('/images/book_background.jpg');
-    background-size: cover; /* covers entire screen */
-    background-position: center; /* centers the image */
-    background-repeat: no-repeat; /* prevents repeating */
-    background-attachment: fixed; /* fixes image during scroll */
-    color: #fff; /* Adjust text color for contrast */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-.content {
-    background-color: rgba(0, 0, 0, 0.5); /* transparent overlay for readability */
+.container-flex {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 800px; /* Fixed width */
+    margin: 0 auto;
     padding: 20px;
-    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.header {
+    
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+}
 
+.container-grid {
+    display: grid;
+    grid-template-columns: 120px 1fr; /* Adjust the first column width to fit your book cover nicely */
+    gap: 20px;
+    align-items: start;
+    width: 100%;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #666;
+}
+
+.book-cover {
+    width: 100%; /* Fills the grid column */
+    height: auto;
+    display: block;
+}
+
+.book-title {
+    color: #0f0; /* green color from your screenshot */
+    margin-bottom: 5px;
+}
+
+.date-read {
+    color: #aaa;
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.book-description {
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.notes-link, .amazon-link {
+    color: #66f;
+    text-decoration: none;
+}
+
+.notes-link:hover, .amazon-link:hover {
+    text-decoration: underline;
+}
